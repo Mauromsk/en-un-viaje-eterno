@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>En un Viaje Eterno</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>En un Viaje Eterno</h1>
+    <nav>
+        <a href="galeria.html">
+            <button>Galería</button>
+        </a>
+      <button onclick="scrollToSection('servicios')">Turnos</button>
+      <button onclick="scrollToSection('contacto')">Contacto</button>
+    </nav>
+  </header>
+
+
+  <section id="servicios">
+    <h2>Agenda</h2>
+    <p>Para agendar un turno, seleccioná una fecha o consultá por WhatsApp.</p>
+
+    <!-- Calendario -->
+    <div class="calendar-wrapper">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=1f83b4182760cf0fe545282763e4a2e9c7df43f24619b4f5a9df2a1f67f38d59%40group.calendar.google.com&ctz=America%2FArgentina%2FBuenos_Aires"
+        frameborder="0"
+        scrolling="no">
+      </iframe>
+    </div>
+
+    <!-- WhatsApp -->
+    <div class="whatsapp-box">
+      <label for="user-input">Introducir fecha:</label>
+      <input type="text" id="user-input" placeholder="Ej: 12 de abril">
+      <button onclick="sendMessage()">Enviar por WhatsApp</button>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Podés encontrarme en redes sociales.</p>
+
+    <a href="https://www.instagram.com/moscamauro/" target="_blank" class="instagram-button">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Fede Natali. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
