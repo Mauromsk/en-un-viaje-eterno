@@ -1,4 +1,12 @@
 
+@font-face {
+    font-family: 'BrothersOlders';
+    src: url('fonts/BrothersOlders.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,21 +16,32 @@ body {
   }
   
   
-  header {
+  /*header {
     background: #2b2b2b;
     color: #f5f5f5;
     padding: 30px 20px;
     text-align: center;
-  }
- 
-  header h1 {
-    font-family: 'BrothersOlders', serif;
-    font-size: 2.8rem;
-    color: #8c1d18; /* rojo vino neotrad */
-    letter-spacing: 2px;
-    text-transform: uppercase;
+  }*/
+
+  header {
+    background: #262626;
+    color: #f5f5f5;
+    padding: 40px 20px 35px;
+    text-align: center;
   }
   
+ 
+  header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #8c1d18;
+    font-family: 'BrothersOlders', Arial, sans-serif;
+    position: relative;
+  }
+  
+
   header h1 {
     margin: 0;
     font-size: 2.4rem;
@@ -39,7 +58,7 @@ body {
     height: 2px;
     background: #c46b72;
     margin: 12px auto 0;
-  }
+  } 
   
   
   nav {
@@ -113,10 +132,15 @@ body {
     color: white;
   }
   
-  @font-face {
-    font-family: 'BrothersOlders';
-    src: url('fonts/BrothersOlders.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  nav button {
+    background-color: #8c1d18;
+    color: #fff;
+    border-radius: 4px;
+    letter-spacing: 1px;
   }
+  
+  nav button:hover {
+    background-color: #a32620;
+  }
+  
   
