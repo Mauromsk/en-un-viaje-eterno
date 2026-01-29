@@ -106,16 +106,19 @@ nav {
 }
 
 nav button {
-  min-height: 44px;
-  padding: 12px 24px;
+  flex: 1 1 180px;
+  max-width: 220px;
+  min-height: 46px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding: 12px 20px;
   line-height: 1;
+  text-transform: uppercase;
 }
-nav button {
-  min-width: 170px;
-}
+
 
 /* =========================
    BOTONES GENERALES
