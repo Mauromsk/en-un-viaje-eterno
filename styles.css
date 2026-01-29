@@ -33,7 +33,7 @@ section {
     background-color: #f7f4ef; /* blanco hueso */
     color: #1a1a1a;
   }
-  nav {
+nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -41,8 +41,12 @@ section {
 }
 
 nav button {
-  padding: 12px 22px;
-  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  min-height: 44px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
   /* =========================
