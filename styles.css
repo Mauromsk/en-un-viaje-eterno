@@ -2,12 +2,22 @@
    FUENTE
 ========================= */
 @font-face {
-    font-family: 'BrothersOlders';
-    src: url('fonts/BrothersOlders.ttf') format('truetype');
+    font-family: 'retro';
+    src: url('fonts/retro.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
   
+body {
+  overflow-x: hidden;
+}
+
+section {
+  padding: 20px;
+  margin: 20px 15px;
+}
+
+
   /* =========================
      BASE
   ========================= */
@@ -59,7 +69,7 @@
     letter-spacing: 5px;
     text-transform: uppercase;
     color: #8b1e22; /* rojo oscuro */
-    font-family: 'BrothersOlders', Arial, sans-serif;
+    font-family: 'retro', Arial, sans-serif;
     position: relative;
   
     text-shadow:
@@ -279,3 +289,49 @@
   box-shadow: 0 6px 16px rgba(0,0,0,0.35);
 }
 
+@media (max-width: 768px) {
+
+  header {
+    padding: 30px 15px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  nav button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  section {
+    margin: 20px 10px;
+    padding: 18px;
+  }
+
+  .calendar-wrapper iframe {
+    height: 500px;
+  }
+
+  .instagram-button,
+  .whatsapp-button {
+    width: 100%;
+    justify-content: center;
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+}
