@@ -6,39 +6,46 @@
   <title>Galería | En un Viaje Eterno</title>
 
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gallery.css">
 </head>
 
 <body>
 
-  <header>
+ <header>
     <h1>Galería</h1>
     <nav>
-      <a href="index.html">
-        <button>Volver al inicio</button>
-      </a>
+      <button onclick="location.href='index.html'">Volver</button>
     </nav>
   </header>
 
-  <section>
-    <h2>Trabajos realizados</h2>
-    <p>Galería de tatuajes en estilo neotradicional.</p>
-
+  <main class="gallery-container">
     <div class="gallery-grid">
-      <!-- Cuando tengas fotos, solo duplicás estas líneas -->
-      <div class="gallery-item">
-        <img src="img/tattoo1.jpg" alt="Tatuaje neotradicional">
-      </div>
-
-      <div class="gallery-item placeholder"></div>
-      <div class="gallery-item placeholder"></div>
-      <div class="gallery-item placeholder"></div>
-      <div class="gallery-item placeholder"></div>
-      <div class="gallery-item placeholder"></div>
+      <!-- Ejemplo de imágenes -->
+      <img src="img/galeria/IMG_6398.JPG" alt="Tattoo">
+      <img src="img/galeria/IMG_6399.JPG" alt="Tattoo">
+      <img src="img/galeria/IMG_6400.JPG" alt="Tattoo">
+      <img src="img/galeria/IMG_6401.JPG" alt="Tattoo">
+      <img src="img/galeria/IMG_6402.JPG" alt="Tattoo">
+      <img src="img/galeria/IMG_6403.JPG" alt="Tattoo">
+      <img src="img/galeria/IMG_6404.JPG" alt="Tattoo">
+      <img src="img/galeria/IMG_6405.JPG" alt="Tattoo">
+      <img src="img/galeria/IMG_6409.JPG" alt="Tattoo">
+      <img src="img/galeria/IMG_6410.JPG" alt="Tattoo">
+      <img src="img/galeria/IMG_6416.JPG" alt="Tattoo">
+      <img src="img/galeria/IMG_6418.JPG" alt="Tattoo">
     </div>
-  </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img">
+  </div>
+
+  <script src="gallery.js"></script>
 
   <footer>
-    <p>&copy; 2023 En un Viaje Eterno</p>
+    <p>&copy; 2026 En un Viaje Eterno</p>
   </footer>
 
 </body>
