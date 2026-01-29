@@ -113,6 +113,9 @@ nav button {
   justify-content: center;
   line-height: 1;
 }
+nav button {
+  min-width: 170px;
+}
 
 /* =========================
    BOTONES GENERALES
