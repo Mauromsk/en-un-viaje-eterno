@@ -298,10 +298,10 @@ nav button {
   box-shadow: 0 6px 16px rgba(0,0,0,0.35);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 
   header {
-    padding: 30px 15px;
+    padding: 25px 15px;
   }
 
   header h1 {
@@ -343,4 +343,15 @@ nav button {
     font-size: 0.9rem;
     padding: 15px;
   }
+}
+
+.instagram-button,
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  width: fit-content;
+  max-width: 100%;
 }
