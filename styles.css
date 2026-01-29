@@ -2,42 +2,107 @@
    FUENTE
 ========================= */
 @font-face {
-    font-family: 'retro';
-    src: url('fonts/retro.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  html, body {
+  font-family: 'retro';
+  src: url('fonts/retro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* =========================
+   RESET / BASE
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
 
 body {
-  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f4ef; /* blanco hueso */
+  color: #1a1a1a;
 }
 
-section {
-  padding: 20px;
-  margin: 20px 15px;
+/* =========================
+   HEADER
+========================= */
+header {
+  background: #1a1a1a; /* tinta */
+  color: #f7f4ef;
+  padding: 50px 20px 45px;
+  text-align: center;
+  position: relative;
 }
 
+/* Marcos superior e inferior */
+header::before,
+header::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 1px;
+  background: #d8bfa6; /* sepia */
+}
 
-  /* =========================
-     BASE
-  ========================= */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f4ef; /* blanco hueso */
-    color: #1a1a1a;
-  }
+header::before {
+  top: 18px;
+}
+
+header::after {
+  bottom: 18px;
+}
+
+/* =========================
+   TITULO
+========================= */
+header h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  letter-spacing: clamp(2px, 0.8vw, 4px);
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: 'retro', Arial, sans-serif;
+  position: relative;
+  text-shadow:
+    1px 1px 0 #2f2f2f,
+    3px 3px 0 rgba(0,0,0,0.6);
+}
+
+/* Ornamentos laterales */
+header h1::before,
+header h1::after {
+  content: "✦";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #d8bfa6;
+  font-size: 1.1rem;
+}
+
+header h1::before {
+  left: -32px;
+}
+
+header h1::after {
+  right: -32px;
+}
+
+/* =========================
+   NAV
+========================= */
 nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+  margin-top: 22px;
 }
 
 nav button {
@@ -49,185 +114,42 @@ nav button {
   line-height: 1;
 }
 
-  /* =========================
-     HEADER
-  ========================= */
-  header {
-    background: #1a1a1a; /* tinta */
-    color: #f7f4ef;
-    padding: 50px 20px 45px;
-    text-align: center;
-    position: relative;
-  }
-  
-  /* Marco superior e inferior */
-  header::before,
-  header::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 85%;
-    height: 1px;
-    background: #d8bfa6; /* sepia */
-  }
-  
-  header::before {
-    top: 18px;
-  }
-  
-  header::after {
-    bottom: 18px;
-  }
-  
-  /* =========================
-     TITULO
-  ========================= */
-  header h1 {
-    margin: 0;
-    font-size: clamp(1.8rem, 5vw, 2.6rem);
-    letter-spacing: clamp(2px, 0.8vw, 4px);
-    text-transform: uppercase;
-    color: #ffffff; /* rojo oscuro */
-    font-family: 'retro', Arial, sans-serif;
-    position: relative;
-  
-    text-shadow:
-      1px 1px 0 #2f2f2f,
-      3px 3px 0 rgba(0,0,0,0.6);
-  }
-  
-  /* Ornamentos laterales */
-  header h1::before,
-  header h1::after {
-    content: "✦";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #d8bfa6;
-    font-size: 1.1rem;
-  }
-  
-  header h1::before {
-    left: -32px;
-  }
-  
-  header h1::after {
-    right: -32px;
-  }
-  
-  /* =========================
-     NAV
-  ========================= */
-  nav {
-    margin-top: 22px;
-  }
-  
-  /* =========================
-     BOTONES
-  ========================= */
-  button {
-    background-color: #8b1e22;
-    color: #f7f4ef;
-    border: none;
-    padding: 12px 26px;
-    margin: 6px;
-    cursor: pointer;
-    border-radius: 5px;
-    letter-spacing: 1.1px;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.35);
-  }
-  
-  button:hover {
-    background-color: #a12a28;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.45);
-  }
-  
-  /* =========================
-     SECCIONES
-  ========================= */
-  section {
-    padding: 35px;
-    margin: 30px auto;
-    width: 92%;
-    max-width: 1100px;
-    background: #f7f4ef;
-    border-radius: 8px;
-    box-shadow: 0 6px 22px rgba(0,0,0,0.12);
-  }
-  
-  /* =========================
-     CALENDARIO
-  ========================= */
-  .calendar-wrapper iframe {
-    width: 100%;
-    max-width: 800px;
-    height: 600px;
-    border: 0;
-  }
-  
-  /* =========================
-     WHATSAPP
-  ========================= */
-  .whatsapp-box {
-    margin-top: 20px;
-  }
-  
-  .whatsapp-box input {
-    padding: 8px;
-    width: 200px;
-    margin-right: 10px;
-  }
-  
-  /* =========================
-     INSTAGRAM
-  ========================= */
-  .instagram-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #2f2f2f;
-    color: #f7f4ef;
-    padding: 10px 16px;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  
-  .instagram-button:hover {
-    background-color: #1a1a1a;
-  }
-  
-  /* =========================
-     FOOTER
-  ========================= */
-  footer {
-    text-align: center;
-    padding: 15px;
-    background: #1a1a1a;
-    color: #bdb7b0;
-    font-size: 0.85rem;
-  }
-  
-  /* =========================
-   HERO
+/* =========================
+   BOTONES GENERALES
 ========================= */
-/*.hero {
-  width: 100%;
-  height: 55vh;       
-  min-height: 380px;   
-  max-height: 520px;  
-  overflow: hidden;
+button {
+  background-color: #8b1e22;
+  color: #f7f4ef;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  letter-spacing: 1.1px;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
 }
 
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}*/
+button:hover {
+  background-color: #a12a28;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.45);
+}
 
+/* =========================
+   SECCIONES
+========================= */
+section {
+  padding: 35px;
+  margin: 30px auto;
+  width: 92%;
+  max-width: 1100px;
+  background: #f7f4ef;
+  border-radius: 8px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   HERO
+========================= */
 .hero {
   max-width: 1100px;
   width: 92%;
@@ -235,7 +157,6 @@ nav button {
   border-radius: 10px;
   overflow: hidden;
 }
-
 
 .hero img {
   width: 100%;
@@ -246,7 +167,7 @@ nav button {
 }
 
 /* =========================
-   IMAGENES INTRO
+   IMÁGENES INTRO
 ========================= */
 .intro-images {
   max-width: 1100px;
@@ -271,15 +192,8 @@ nav button {
   filter: brightness(1.05);
 }
 
-@media (max-width: 600px) {
-  .hero {
-    height: 45vh;
-    min-height: 300px;
-  }
-}
-
 /* =========================
-   SECCION CONTACTO / TURNOS
+   CONTACTO / TURNOS
 ========================= */
 .contact-section {
   text-align: center;
@@ -289,11 +203,12 @@ nav button {
 .whatsapp-button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   margin-top: 15px;
-  background-color: #25D366; /* verde WhatsApp */
+  background-color: #25D366;
   color: #1a1a1a;
-  padding: 12px 20px;
+  padding: 14px 20px;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
@@ -307,28 +222,48 @@ nav button {
   box-shadow: 0 6px 16px rgba(0,0,0,0.35);
 }
 
+/* =========================
+   INSTAGRAM
+========================= */
+.instagram-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #2f2f2f;
+  color: #f7f4ef;
+  padding: 14px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.instagram-button:hover {
+  background-color: #1a1a1a;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #1a1a1a;
+  color: #bdb7b0;
+  font-size: 0.85rem;
+}
+
+/* =========================
+   MOBILE FINO (solo ajustes)
+========================= */
 @media (max-width: 480px) {
 
   header {
     padding: 25px 15px;
   }
 
-  header h1 {
-    font-size: 1.8rem;
-    letter-spacing: 2px;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-  }
-
   nav button {
     width: 100%;
-    padding: 14px;
-    font-size: 1rem;
   }
 
   section {
@@ -336,44 +271,8 @@ nav button {
     padding: 18px;
   }
 
-  .calendar-wrapper iframe {
-    height: 500px;
-  }
-
   .instagram-button,
   .whatsapp-button {
     width: 100%;
-    justify-content: center;
-    padding: 14px;
-    font-size: 1rem;
-  }
-
-  footer {
-    font-size: 0.9rem;
-    padding: 15px;
   }
 }
-
-.instagram-button,
-.whatsapp-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 20px;
-  font-size: clamp(0.9rem, 2.5vw, 1rem);
-  width: fit-content;
-  max-width: 100%;
-}
-
-.hero-images {
-  max-width: 1100px;
-  width: 92%;
-  margin: 30px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-* {
-  box-sizing: border-box;
-}
-
